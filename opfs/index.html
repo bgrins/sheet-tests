@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/database.svg" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data UI tests</title>
+  </head>
+  <body>
+    <header>
+      <h1>Test</h1>
+      <button id="show-logs">Logs<span id="status"></span></button>
+    </header>
+    <div id="app">
+      <div id="results"></div>
+    </div>
+    <footer>
+    </footer>
+    <dialog id="logs">
+      <div class="dialog-click-capture">
+        <form method="dialog">
+          <button>Close</button>
+          <code id="total-db-ms" style="float: right"></code>
+        </form>
+        <pre id="log"></pre>
+      </div>
+    </dialog>
+    <script src="/sqlite3-worker1-promiser.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
